@@ -32,23 +32,26 @@ const { title = "O2ER", description = "" } = Astro.props;
 
       /* HEADER */
       header {
-        border-bottom: 1px solid var(--border);
-        background: #000000;
-        backdrop-filter: blur(4px);
+        background: #0d1b2a;              /* bleu nuit institutionnel */
+        border-bottom: 1px solid #0a1620; /* bordure légèrement visible */
         position: sticky;
         top: 0;
         z-index: 10;
       }
-
+      
+      /* NAVIGATION À BANDEAU LARGE */
       nav {
-        display: flex;
-        justify-content: flex-end; 
-        gap: 2.5rem;
-        font-size: 1rem;
+        padding: 1.4rem 4rem;             /* augmente la hauteur et largeur */
       }
-
-      nav a {
-        text-decoration: none;
+      
+      .nav-items {
+        display: flex;
+        justify-content: flex-end;
+        gap: 3rem;                        /* encore plus d'espacement entre les titres */
+        font-size: 1.1rem;                /* titres un peu plus grands */
+      }
+      
+      .nav-items a {
         color: #ffffff;
         font-weight: 500;
       }
