@@ -40,26 +40,31 @@ const { title = "O2ER", description = "" } = Astro.props;
 
       .header-container {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-between; /* navigation à droite */
         align-items: center;
-      }
-      
-      /* ZONE LOGO + NOM */
-      .logo {
-        height: 70px;   /* ajuste selon ta préférence */
-        width: auto;
-        margin-right: 1rem;
+        width: 100%;
       }
       
       .branding {
         display: flex;
         align-items: center;
         gap: 1rem;
+        max-width: 60%;        /* empêche le texte de prendre toute la largeur */
+      }
+      
+      .logo {
+        height: 70px;
+        width: auto;
       }
       
       .text-block {
         display: flex;
         flex-direction: column;
+      }
+      
+      .nav-items {
+        display: flex;
+        gap: 2rem;
       }
             
       .site-title {
@@ -115,18 +120,22 @@ const { title = "O2ER", description = "" } = Astro.props;
   <body>
 
     <header>
-      <div class="branding">
-        <img src="/O2ER/Logo_v1.png" alt="Logo O2ER" class="logo" />
-        <div class="text-block">
-          <div class="site-title">O<sub>2</sub>ER</div>
-          <div class="site-subtitle">Observatoire autonome pour le respect de l’équité et de l’intégrité<br>
-                        dans l’enseignement supérieur et la recherche </div>
-          <div class="nav-wrapper">
-             <slot name="nav" />
+      <div class="header-container">
+        <div class="branding">
+          <img src="/O2ER/Logo_v1.png" alt="Logo O2ER" class="logo" />
+          <div class="text-block">
+            <div class="site-title">O<sub>2</sub>ER</div>
+            <div class="site-subtitle">
+              Observatoire autonome pour le respect de l’équité et de l’intégrité
+              dans l’enseignement supérieur et la recherche
+            </div>
           </div>
         </div>
+    
+        <nav class="nav-items">
+          <slot name="nav" />
+        </nav>
       </div>
-
     </header>
 
     <main>
