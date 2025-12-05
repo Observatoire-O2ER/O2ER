@@ -1,12 +1,11 @@
 <nav class="nav-items">
-    <a href="/O2ER/">ACCUEIL</a>
-    <a href="/O2ER/mission/">MISSION</a>
-    <a href="/O2ER/equipe/">ÉQUIPE</a>
-    <a href="/O2ER/actions/">ACTIONS</a>
-    <a href="/O2ER/ressources/">RESSOURCES</a>
-    <a href="/O2ER/contact/">CONTACT</a>
+  <a href="/O2ER/">ACCUEIL</a>
+  <a href="/O2ER/mission/">MISSION</a>
+  <a href="/O2ER/equipe/">ÉQUIPE</a>
+  <a href="/O2ER/actions/">ACTIONS</a>
+  <a href="/O2ER/ressources/">RESSOURCES</a>
+  <a href="/O2ER/contact/">CONTACT</a>
 </nav>
-
 
 <style>
   .nav-items {
@@ -14,6 +13,9 @@
     justify-content: flex-end;
     gap: 3rem;
     font-size: 1.1rem;
+    flex-wrap: wrap;      /* permet le retour à la ligne */
+    white-space: normal;  /* autorise le wrapping du texte */
+    width: 100%;
   }
 
   .nav-items a {
@@ -25,4 +27,14 @@
   .nav-items a:hover {
     opacity: 0.75;
   }
+
+  /* VERSION MOBILE */
+  @media (max-width: 768px) {
+    .nav-items {
+      justify-content: flex-start;  /* liens alignés à gauche sur mobile */
+      gap: 1rem;                    /* moins d’espace, sinon ça déborde */
+      font-size: 0.9rem;            /* texte un peu réduit */
+    }
+  }
 </style>
+
