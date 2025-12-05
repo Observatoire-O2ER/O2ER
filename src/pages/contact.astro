@@ -11,30 +11,37 @@ import Footer from "../components/Footer.astro";
   <p>Pour contacter O2ER, utilisez le formulaire ci-dessous :</p>
 
   <form action="https://formsubmit.co/observatoire.o2er@gmail.com" method="POST">
-    
+  
+    <!-- Sujet du mail envoyé -->
+    <input type="hidden" name="_subject" value="Nouveau message depuis le site O₂ER">
+  
+    <!-- Désactive le captcha FormSubmit -->
+    <input type="hidden" name="_captcha" value="false">
+  
+    <!-- Formulaire plus lisible dans l'email -->
+    <input type="hidden" name="_template" value="table">
+  
+    <!-- Redirection après envoi (optionnel) -->
+    <input type="hidden" name="_next" value="https://observatoire-o2er.github.io/O2ER/contact/success/">
+  
     <div class="form-field">
       <label for="name">Nom :</label>
       <input id="name" type="text" name="name" required />
     </div>
-
+  
     <div class="form-field">
       <label for="email">Email :</label>
       <input id="email" type="email" name="email" required />
     </div>
-
+  
     <div class="form-field">
       <label for="message">Message :</label>
       <textarea id="message" name="message" rows="6" required></textarea>
     </div>
-
-    <!-- Disable captcha -->
-    <input type="hidden" name="_captcha" value="false" />
-
-    <!-- Redirect after success -->
-    <input type="hidden" name="_next" value="/O2ER/contact/success/" />
-
+  
     <button type="submit">Envoyer</button>
   </form>
+
 
   <Fragment slot="footer"><Footer /></Fragment>
 </BaseLayout>
