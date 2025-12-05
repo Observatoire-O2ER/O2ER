@@ -131,7 +131,6 @@ const { title = "O2ER", description = "" } = Astro.props;
         .header-container {
           flex-direction: column;
           align-items: flex-start;
-          gap: 1rem;
         }
       
         .branding {
@@ -153,10 +152,15 @@ const { title = "O2ER", description = "" } = Astro.props;
           max-width: 90%;      /* évite de dépasser l'écran */
         }
       
+        .nav-wrapper {
+          width: 100%;
+        }
+      
         .nav-items {
-          flex-wrap: wrap;     /* les liens passent sur deux lignes si besoin */
-          gap: 1rem;
-          justify-content: flex-start;
+          width: 100%;
+          flex-wrap: wrap;
+          justify-content: flex-start; /* mieux sur mobile */
+          gap: 0.8rem;
         }
       }
 
