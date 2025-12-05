@@ -54,10 +54,12 @@ const { title = "O2ER", description = "" } = Astro.props;
       
       .nav-items {
         display: flex;
-        flex-wrap: wrap;   /* permet d’afficher tous les éléments */
+        flex-wrap: wrap;     /* autorise les retours à la ligne */
         gap: 1rem;
         justify-content: flex-end;
-        width: 100%;       /* évite que la nav se coupe */
+        width: 100%;
+        overflow: visible;    /* évite la coupure */
+        white-space: normal;  /* permet le wrapping */
       }
 
       .branding {
