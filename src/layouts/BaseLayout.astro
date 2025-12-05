@@ -45,12 +45,23 @@ const { title = "O2ER", description = "" } = Astro.props;
       }
       
       /* ZONE LOGO + NOM */
-      .branding {
-        display: flex;
-        flex-direction: column;
-        gap: 0.2rem;
+      .logo {
+        height: 70px;   /* ajuste selon ta préférence */
+        width: auto;
+        margin-right: 1rem;
       }
       
+      .branding {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+      }
+      
+      .text-block {
+        display: flex;
+        flex-direction: column;
+      }
+            
       .site-title {
         font-size: 2rem;              /* titre institutionnel */
         font-weight: 600;
@@ -63,7 +74,7 @@ const { title = "O2ER", description = "" } = Astro.props;
         font-weight: 300;
         color: #dce6f2;               /* gris bleuté institutionnel */
       }
-      
+
       /* CONTENT */
       main {
         max-width: 900px;
@@ -104,17 +115,18 @@ const { title = "O2ER", description = "" } = Astro.props;
   <body>
 
     <header>
-      <div class="header-container">
-        <div class="branding">
-          <div class="site-title">O2ER</div>
+      <div class="branding">
+        <img src="/O2ER/Logo_v1.png" alt="Logo O2ER" class="logo" />
+        <div class="text-block">
+          <div class="site-title">O<sub>2</sub>ER</div>
           <div class="site-subtitle">Observatoire autonome pour le respect de l’équité et de l’intégrité<br>
                         dans l’enseignement supérieur et la recherche </div>
-        </div>
-    
-        <div class="nav-wrapper">
-          <slot name="nav" />
+          <div class="nav-wrapper">
+             <slot name="nav" />
+          </div>
         </div>
       </div>
+
     </header>
 
     <main>
