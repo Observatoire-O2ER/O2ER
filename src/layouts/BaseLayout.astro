@@ -39,12 +39,27 @@ const { title = "O2ER", description = "" } = Astro.props;
       }
 
       .header-container {
-        display: flex;
-        justify-content: space-between; /* navigation à droite */
-        align-items: center;
         width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
       }
       
+      /* Navigation */
+      .nav-wrapper {
+        width: 100%;       /* IMPORTANT */
+        display: flex;
+        justify-content: flex-end;
+      }
+      
+      .nav-items {
+        display: flex;
+        flex-wrap: wrap;   /* permet d’afficher tous les éléments */
+        gap: 1rem;
+        justify-content: flex-end;
+        width: 100%;       /* évite que la nav se coupe */
+      }
+
       .branding {
         display: flex;
         align-items: center;
@@ -60,11 +75,6 @@ const { title = "O2ER", description = "" } = Astro.props;
       .text-block {
         display: flex;
         flex-direction: column;
-      }
-      
-      .nav-items {
-        display: flex;
-        gap: 2rem;
       }
             
       .site-title {
