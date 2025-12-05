@@ -79,10 +79,13 @@ const { title = "O2ER", description = "" } = Astro.props;
         color: var(--accent);
       }
 
-      h2 {
-        font-size: 1.55rem;
-        margin-top: 2.5rem;
+      h2 a {
         color: var(--accent);
+        text-decoration: none;
+      }
+      
+      h2 a:hover {
+        text-decoration: underline;
       }
 
       /* FOOTER */
