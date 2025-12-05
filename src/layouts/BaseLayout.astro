@@ -1,0 +1,61 @@
+---
+const { title = "O2ER", description = "" } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <style>
+      body {
+        margin: 0;
+        font-family: system-ui, sans-serif;
+        color: #222;
+        line-height: 1.55;
+      }
+      main {
+        max-width: 840px;
+        margin: 3rem auto;
+        padding: 0 1.2rem;
+      }
+      a {
+        color: #0055aa;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      nav {
+        display: flex;
+        gap: 1.5rem;
+        padding: 1rem 2rem;
+        border-bottom: 1px solid #ddd;
+        font-size: 0.95rem;
+      }
+      footer {
+        margin-top: 4rem;
+        padding: 2rem;
+        text-align: center;
+        color: #777;
+        font-size: 0.9rem;
+        border-top: 1px solid #ddd;
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <slot name="nav" />
+    </nav>
+
+    <main>
+      <slot />
+    </main>
+
+    <footer>
+      <slot name="footer" />
+    </footer>
+  </body>
+</html>
