@@ -114,6 +114,42 @@ const { title = "O2ER", description = "" } = Astro.props;
         font-size: 0.9rem;
         border-top: 1px solid var(--border);
       }
+
+      /* --- RESPONSIVE HEADER --- */
+      @media (max-width: 768px) {
+      
+        .header-container {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
+        }
+      
+        .branding {
+          max-width: 100%;
+          gap: 0.5rem;
+        }
+      
+        .logo {
+          height: 50px;       /* réduit le logo sur mobile */
+        }
+      
+        .site-title {
+          font-size: 1.4rem;   /* réduit légèrement */
+        }
+      
+        .site-subtitle {
+          font-size: 0.8rem;
+          line-height: 1.2;
+          max-width: 90%;      /* évite de dépasser l'écran */
+        }
+      
+        .nav-items {
+          flex-wrap: wrap;     /* les liens passent sur deux lignes si besoin */
+          gap: 1rem;
+          justify-content: flex-start;
+        }
+      }
+
     </style>
   </head>
 
