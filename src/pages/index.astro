@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="O2ER — Observatoire pour l’Équité et l’Intégrité en Recherche">
+  <Fragment slot="nav"><NavBar /></Fragment>
+
+  <h1>O2ER</h1>
+  <p>
+    L’Observatoire pour l’Équité et l’Intégrité en Recherche (O2ER) est une initiative
+    indépendante dédiée à documenter, analyser et prévenir les abus institutionnels,
+    les violations de l’intégrité scientifique et les discriminations dans le monde
+    académique.
+  </p>
+
+  <h2>Objectifs</h2>
+  <ul>
+    <li>Analyser des cas réels d’injustice institutionnelle</li>
+    <li>Produire des dossiers rigoureux et utiles pour la communauté</li>
+    <li>Développer des outils concrets d’action collective</li>
+  </ul>
+
+  <Fragment slot="footer"><Footer /></Fragment>
+</BaseLayout>
