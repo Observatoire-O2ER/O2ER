@@ -158,12 +158,11 @@ const { title = "O2ER", description = "" } = Astro.props;
           width: 100%;
         }
       
-        .nav-items {
-          width: 100%;
-          flex-wrap: wrap;
-          justify-content: flex-start; /* mieux sur mobile */
-          gap: 0.8rem;
-        }
+      .nav-items {
+        justify-content: flex-start; /* évite que les liens s’étirent */
+        gap: 0.8rem;
+        font-size: 0.9rem;
+      }
       }
 
     </style>
