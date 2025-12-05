@@ -8,47 +8,93 @@ const { title = "O2ER", description = "" } = Astro.props;
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
+
+    <!-- Font institutionnelle -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <style>
+      :root {
+        --accent: #123a63; /* bleu nuit institutionnel */
+        --text: #222;
+        --text-light: #555;
+        --border: #ddd;
+      }
+
       body {
         margin: 0;
-        font-family: system-ui, sans-serif;
-        color: #222;
-        line-height: 1.55;
+        font-family: 'Inter', system-ui, sans-serif;
+        font-size: 17px;
+        color: var(--text);
+        background: #fff;
       }
-      main {
-        max-width: 840px;
-        margin: 3rem auto;
-        padding: 0 1.2rem;
+
+      /* HEADER */
+      header {
+        border-bottom: 1px solid var(--border);
+        background: #ffffffcc;
+        backdrop-filter: blur(4px);
+        position: sticky;
+        top: 0;
+        z-index: 10;
       }
-      a {
-        color: #0055aa;
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
+
       nav {
         display: flex;
-        gap: 1.5rem;
-        padding: 1rem 2rem;
-        border-bottom: 1px solid #ddd;
+        gap: 2rem;
+        padding: 1rem 2.5rem;
         font-size: 0.95rem;
       }
+
+      nav a {
+        text-decoration: none;
+        color: var(--accent);
+        font-weight: 500;
+      }
+
+      nav a:hover {
+        opacity: 0.7;
+      }
+
+      /* CONTENT */
+      main {
+        max-width: 900px;
+        margin: 3.5rem auto;
+        padding: 0 1.5rem;
+        line-height: 1.6;
+      }
+
+      h1 {
+        font-size: 2.2rem;
+        font-weight: 600;
+        margin-top: 0;
+        color: var(--accent);
+      }
+
+      h2 {
+        font-size: 1.55rem;
+        margin-top: 2.5rem;
+        color: var(--accent);
+      }
+
+      /* FOOTER */
       footer {
         margin-top: 4rem;
-        padding: 2rem;
+        padding: 2rem 1rem;
         text-align: center;
-        color: #777;
+        color: var(--text-light);
         font-size: 0.9rem;
-        border-top: 1px solid #ddd;
+        border-top: 1px solid var(--border);
       }
     </style>
   </head>
 
   <body>
-    <nav>
+
+    <header>
       <slot name="nav" />
-    </nav>
+    </header>
 
     <main>
       <slot />
@@ -57,5 +103,6 @@ const { title = "O2ER", description = "" } = Astro.props;
     <footer>
       <slot name="footer" />
     </footer>
+
   </body>
 </html>
