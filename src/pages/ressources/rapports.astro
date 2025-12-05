@@ -1,0 +1,17 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import NavBar from "../../components/NavBar.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<BaseLayout title="Rapports — Ressources O₂ER">
+  <Fragment slot="nav"><NavBar /></Fragment>
+
+  <h1>Rapports et textes de loi</h1>
+  <p>
+  Code de la Recherche <a href="https://www.legifrance.gouv.fr/codes/texte_lc/LEGITEXT000006071190/" target="_blank">rapport fondateur</a>
+  Rapport du comité national du CNRS concernant les entraves à la recherche <a href="https://www.cnrs.fr/comitenational/cs/recommandations/Rapport_Entraves_vf.pdf" target="_blank">rapport fondateur</a>
+</p>
+
+  <Fragment slot="footer"><Footer /></Fragment>
+</BaseLayout>
