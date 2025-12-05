@@ -1,0 +1,18 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import NavBar from "../components/NavBar.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<BaseLayout title="Équipe — O2ER">
+  <Fragment slot="nav"><NavBar /></Fragment>
+
+  <h1>Équipe</h1>
+
+  <p>
+    L’Observatoire réunit des chercheuses, chercheurs, ingénieurs et acteurs du monde
+    académique engagés pour la transparence et l'équité.
+  </p>
+
+  <Fragment slot="footer"><Footer /></Fragment>
+</BaseLayout>
