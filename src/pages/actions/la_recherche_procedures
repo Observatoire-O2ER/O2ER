@@ -4,16 +4,136 @@ import NavBar from "../../components/NavBar.astro";
 import Footer from "../../components/Footer.astro";
 ---
 
-<BaseLayout title="Premier texte collectif — O₂ER">
+<BaseLayout title="La recherche publique à l’épreuve de ses propres procédures — O₂ER">
   <Fragment slot="nav"><NavBar /></Fragment>
 
-  <h1>Premier texte collectif</h1>
+  <article class="text-page">
+    <h1>La recherche publique à l’épreuve de ses propres procédures</h1>
 
-  <p><strong>Date :</strong> 26 février 2026</p>
+    <p class="meta">26 février 2026</p>
 
-  <p>
-    [Insère ici le texte intégral ou une introduction suivie du texte.]
-  </p>
+    <p>
+      Ce texte est porté par O2ER – Observatoire autonome pour le respect de l’équité et de l’intégrité dans l’enseignement supérieur et la recherche (ESR).
+      Il s’adresse aux directions d’établissements, aux tutelles, aux responsables administratifs, aux instances d’évaluation et aux décideurs publics.
+    </p>
+
+    <p>
+      Son objectif est double :
+    </p>
+
+    <ul>
+      <li>rendre visibles les limites manifestes observées dans la mise en œuvre des dispositifs internes de signalement ;</li>
+      <li>formuler des exigences minimales afin que ces dispositifs remplissent pleinement leur finalité protectrice.</li>
+    </ul>
+
+    <p>
+      Depuis 2017 et 2021, les établissements d’enseignement supérieur et de recherche se sont dotés de dispositifs internes visant les situations de harcèlement, de conflits professionnels ou de manquements à l’intégrité scientifique.
+      Leur principe est légitime et conforme aux obligations réglementaires.
+    </p>
+
+    <p>
+      Cependant, l’expérience montre que leurs effets peuvent être considérables : suspension d’un responsable scientifique, blocage d’un projet financé, désorganisation d’une équipe, interruption de contrats doctoraux ou postdoctoraux, atteinte durable à une réputation.
+    </p>
+
+    <p>
+      Une procédure interne n’est pas une procédure judiciaire. Mais ses conséquences peuvent être lourdes.
+      Cela impose un niveau d’exigence équivalent à celui attendu des chercheurs dans l’élaboration de leurs travaux : rigueur, traçabilité, impartialité.
+    </p>
+
+    <h2>1. Prévention des risques psychosociaux avant toute instruction formelle</h2>
+
+    <p>
+      Avant toute enquête formelle, l’employeur public doit assumer sa responsabilité première : prévenir et traiter les risques psychosociaux (RPS).
+      [...]
+    </p>
+
+    <h2>2. Pas de pouvoir sans responsabilité</h2>
+
+    <p>
+      Toute personne exerçant un pouvoir d’instruction ou de décision doit être soumise aux mêmes obligations de transparence, de contrôle et de régulation que celles qu’elle applique.
+      [...]
+    </p>
+
+    <h2>3. Responsabilité de l’administration et sécurité juridique</h2>
+
+    <p>
+      Il incombe à l’employeur public de définir et de garantir un cadre conforme aux obligations légales, déontologiques et contractuelles.
+      [...]
+    </p>
+
+    <h2>4. Recevabilité et clarification précoce</h2>
+
+    <p>[...]</p>
+
+    <h2>5. Transparence, référentiel clair et recours effectifs</h2>
+
+    <p>[...]</p>
+
+    <h2>6. Exigence probatoire</h2>
+
+    <p>[...]</p>
+
+    <h2>7. Évaluation indépendante des pratiques disciplinaires</h2>
+
+    <p>[...]</p>
+
+    <h2>8. Prévisibilité et protection des parcours</h2>
+
+    <p>[...]</p>
+
+    <h2>9. Protection pendant et après l’enquête</h2>
+
+    <p>[...]</p>
+
+    <h2>Conclusion</h2>
+
+    <p>
+      Les décisions issues des procédures internes doivent être cohérentes avec le droit public, le droit du travail,
+      les obligations contractuelles des établissements et les réalités opérationnelles de la recherche.
+    </p>
+
+    <p>
+      Réformer ces dispositifs ne revient pas à affaiblir la lutte contre les abus.
+      C’est la condition de sa légitimité.
+    </p>
+
+    <h3>Signataires membres de O2ER</h3>
+
+    <ul class="signatories">
+      <li>Suliann Ben Hamed – Présidente de O2ER, chercheuse en neuroscience, ERC-Consolidator, ERC-PoC</li>
+      <li>Caroline Guibet Lafaye – chercheuse en sciences sociales</li>
+      <li>David Hansel – chercheur en neurosciences théoriques</li>
+      <li>David Holcman – chercheur en neuroscience, ERC-Advanced, ERC-PoC</li>
+      <li>Thierry Kirat – chercheur en sociologie et science du droit</li>
+      <li>Emmanuel Picavet – professeur de philosophie et d’éthique appliquée</li>
+      <li>Juliette Rouchier – chercheuse en économie</li>
+      <li>Angela Sirigu – chercheuse en neuroscience, ERC-Synergy</li>
+    </ul>
+  </article>
 
   <Fragment slot="footer"><Footer /></Fragment>
 </BaseLayout>
+
+<style>
+  .text-page {
+    max-width: 800px;
+    margin: auto;
+  }
+
+  .meta {
+    color: #666;
+    margin-bottom: 2rem;
+  }
+
+  h2 {
+    margin-top: 2.5rem;
+  }
+
+  ul {
+    margin-left: 1.5rem;
+  }
+
+  .signatories {
+    margin-top: 2rem;
+  }
+</style>
