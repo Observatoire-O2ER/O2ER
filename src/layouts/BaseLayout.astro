@@ -40,6 +40,15 @@ const { title = "O2ER", description = "" } = Astro.props;
         color: white;
       }
 
+      /* Sticky header uniquement desktop */
+      @media (min-width: 1024px) {
+        header {
+          position: sticky;
+          top: 0;
+          z-index: 2000;
+        }
+      }
+
       .header-container {
         width: 100%;
         display: flex;
