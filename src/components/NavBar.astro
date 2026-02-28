@@ -28,6 +28,17 @@
     opacity: 0.75;
   }
 
+  /* VERSION DESKTOP : sticky uniquement sur écran large */
+  @media (min-width: 1024px) {
+    .nav-items {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: #0a1a2a; /* mets ici la vraie couleur de ton header */
+      padding: 1rem 2rem;  /* optionnel : évite effet “collé” */
+    }
+  }
+
   /* VERSION MOBILE */
   @media (max-width: 768px) {
     .nav-items {
